@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "name": "Abhay Rawat",
+    "department": "CSE",
+    "salary": 500000
+  },
+  {
+    "id": 2,
+    "name": "Ankit Mishra",
+    "department": "IT",
+    "salary": 60000
+  },
+  {
+    "id": 3,
+    "name": "Vaishali  Singh",
+    "department": "HR",
+    "salary": 55000
+  },
+  {
+    "id": 4,
+    "name": "Rahul Verma",
+    "department": "CSE",
+    "salary": 65000
+  },
+  {
+    "id": 5,
+    "name": "Sneha Gupta",
+    "department": "CSE",
+    "salary": 48000
+  },
+  {
+    "id": 6,
+    "name": "Amit Sharma",
+    "department": "Sales",
+    "salary": 52000
+  },
+  {
+    "id": 7,
+    "name": "Neha Reddy",
+    "department": "IT",
+    "salary": 58000
+  },
+  {
+    "id": 8,
+    "name": "Vikram Singh",
+    "department": "CSE",
+    "salary": 47000
+  },
+  {
+    "id": 10,
+    "name": "Rohit Kumar",
+    "department": "Research and Development",
+    "salary": 70000
+  },
+  {
+    "id": 1771395799282,
+    "name": "Lalit ",
+    "department": "CSE",
+    "salary": 50000
+  },
+  {
+    "id": 1771480792694,
+    "name": "Abhinav singh",
+    "department": "IT",
+    "salary": 520000
+  }
+]
