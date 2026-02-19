@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Employee Payroll</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>Employee Details</h1>
+
+  <!-- SUMMARY CARDS -->
+  <div class="cards">
+    <div class="card">👥 Employees <h2><%= totalEmployees %></h2></div>
+    <div class="card">🏢 Departments <h2><%= departmentCount %></h2></div>
+    <div class="card">💰 Salary <h2>₹<%= totalSalary.toFixed(2) %></h2></div>
+    <div class="card">🧾 Tax <h2>₹<%= totalTax.toFixed(2) %></h2></div>
+    <div class="card">💵 Net <h2>₹<%= totalNet.toFixed(2) %></h2></div>
+    <div class="card">📊 Avg <h2>₹<%= avgSalary.toFixed(2) %></h2></div>
+  </div>
+
+  <div class="header">
+    <input id="searchInput" placeholder="🔍 Search Employee">
+    <a href="/add" class="btn">+ Add User</a>
+  </div>
+
+  <table id="empTable">
+    <tr>
+      <th>Name</th>
+      <th>Department</th>
+      <th>Salary</th>
+      <th>Tax</th>
+      <th>Net</th>
+      <th>Actions</th>
+    </tr>
+
+    <% employees.forEach(emp => { 
+      let tax = emp.salary * 0.12;
+      let net = emp.salary - tax;
+    %>
+    <tr>
+      <td><%= emp.name %></td>
+      <td><span class="badge"><%= emp.department %></span></td>
+      <td>₹<%= emp.salary %></td>
+      <td>₹<%= tax.toFixed(2) %></td>
+      <td>₹<%= net.toFixed(2) %></td>
+      <td>
+        <a href="/edit/<%= emp.id %>" class="edit">✏️</a>
+        <a href="/delete/<%= emp.id %>" class="delete">🗑️</a>
+      </td>
+    </tr>
+    <% }) %>
+  </table>
+</div>
+
+<script>
+const input = document.getElementById("searchInput");
+input.addEventListener("keyup", function () {
+  const filter = input.value.toLowerCase();
+  const rows = document.querySelectorAll("#empTable tr");
+
+  rows.forEach((row, index) => {
+    if (index === 0) return;
+    row.style.display = row.innerText.toLowerCase().includes(filter) ? "" : "none";
+  });
+});
+</script>
+
+</body>
+</html>

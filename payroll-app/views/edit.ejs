@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Edit Employee</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>Edit Employee</h1>
+
+  <form action="/edit/<%= employee.id %>" method="POST" class="form">
+    <input name="name" value="<%= employee.name %>" required>
+    <input name="department" value="<%= employee.department %>" required>
+    <input name="salary" type="number" value="<%= employee.salary %>" required>
+
+    <button class="btn">Update Employee</button>
+  </form>
+</div>
+
+</body>
+</html>
